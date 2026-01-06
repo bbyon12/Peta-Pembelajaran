@@ -1,0 +1,115 @@
+<!--
+Nama file : about.html
+Tanggal ngoding: 25 December 2025
+Kelas : 05TPLP017
+Kelompok : 8
+Anggota : FAIQ AFLAH NADIF, RUDI SAFRIAN, YOHANES HUTAGAOL
+Deskripsi : Halaman About berisi profil anggota kelompok dengan foto, NIM, peran, minat, dan TTL
+-->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Kelompok 8</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Link ke File CSS Eksternal -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header flex-row">
+        <div class="logo-area" onclick="window.location.href='index.html'">
+            <div class="logo-icon">8</div>
+            <h1>KELOMPOK 8</h1>
+        </div>
+        <!-- Menu Navigasi -->
+        <div class="nav-group">
+            <button onclick="window.location.href='index.html'" class="btn btn-pink btn-nav">🏠 HOME</button>
+            <button onclick="window.location.href='about.html'" class="btn btn-blue btn-nav">👥 ABOUT</button>
+            <button onclick="window.location.href='contact.html'" class="btn btn-green btn-nav">📞 CONTACT</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- === HALAMAN ABOUT === -->
+        <div id="about" class="fade-in">
+            <div class="chapter-title bg-blue-light">
+                <h2 class="text-blue">TENTANG KAMI</h2>
+                <p>Profil Tim Penyusun Makalah Kelompok 8</p>
+            </div>
+
+            <div class="grid-container">
+                <!-- Profil 1 (Yohanes) -->
+                <div class="comic-card">
+                    <div class="card-header-strip strip-dark"></div>
+                    <div class="card-body text-center">
+                        <div class="profile-avatar bg-yellow-light">YH</div>
+                        <h3 class="text-dark mt-4">Yohanes Hutagaol</h3>
+                        <p class="font-bold text-blue">NIM: 231011402319</p>
+                        <hr class="divider">
+                        <p class="text-left text-small">
+                            <strong>Peran:</strong> Menyusun BAB 1 - 9<br>
+                            <strong>Minat:</strong> JS Logic, Tailwind, MySQL<br>
+                            <strong>TTL:</strong> Tangerang, 26 Sept 2004
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Profil 2 (Placeholder) -->
+                <div class="comic-card">
+                    <div class="card-header-strip strip-purple"></div>
+                    <div class="card-body text-center">
+                        <div class="profile-avatar bg-purple-light">FA</div>
+                        <h3 class="text-dark mt-4">FAIQ AFLAH NADIF</h3>
+                        <p class="font-bold text-purple">NIM: 231011403080</p>
+                        <hr class="divider">
+                        <p class="text-left text-small">
+                            <strong>Peran:</strong> Membuat website Project UTS <br>
+                            <strong>Minat:</strong> NATIVE CSS, JS <br>
+                            <strong>TTL:</strong> Jakarta, 25 Desember 2005
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Profil 3 (Placeholder) -->
+                <div class="comic-card">
+                    <div class="card-header-strip strip-green"></div>
+                    <div class="card-body text-center">
+                        <div class="profile-avatar bg-green-light">RS</div>
+                        <h3 class="text-dark mt-4">Rudi Safrian</h3>
+                        <p class="font-bold text-green">NIM: 23101141815</p>
+                        <hr class="divider">
+                        <p class="text-left text-small">
+                            <strong>Peran:</strong> Menyusun Bab 1 - 9<br>
+                            <strong>Minat:</strong> Minat Anggota <br>
+                            <strong>TTL:</strong> [Tempat Tanggal Lahir]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button onclick="window.location.href='index.html'" class="btn btn-pink">KEMBALI KE HOME</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h3>KELOMPOK 8</h3>
+        <p>Universitas Pamulang - Teknik Informatika 2025</p>
+        <p class="footer-credit">Kelompok 8</p>
+    </footer>
+
+    <!-- Link ke File JavaScript Eksternal -->
+    <script src="js/Script.js"></script>
+</body>
+</html>

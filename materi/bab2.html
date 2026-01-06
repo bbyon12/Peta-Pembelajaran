@@ -1,0 +1,107 @@
+<!--
+Nama file : bab2.html
+Tanggal ngoding: 25 December 2025
+Kelas : 05TPLP017
+Kelompok : 8
+Anggota : FAIQ AFLAH NADIF, RUDI SAFRIAN, YOHANES HUTAGAOL
+Deskripsi : Halaman BAB 2: HTML5 Foundation - Tulang punggung struktural halaman web
+-->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAB 2: HTML5 Foundation - Kelompok 8</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Link ke File CSS Eksternal -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header flex-row">
+        <div class="logo-area" onclick="window.location.href='../index.html'">
+            <div class="logo-icon">8</div>
+            <h1>KELOMPOK 8</h1>
+        </div>
+        <!-- Menu Navigasi -->
+        <div class="nav-group">
+            <button onclick="window.location.href='../index.html'" class="btn btn-pink btn-nav">🏠 HOME</button>
+            <button onclick="window.location.href='../about.html'" class="btn btn-blue btn-nav">👥 ABOUT</button>
+            <button onclick="window.location.href='../contact.html'" class="btn btn-green btn-nav">📞 CONTACT</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- === HALAMAN BAB 2 === -->
+        <div id="bab2" class="fade-in">
+            <div class="chapter-title bg-orange-light">
+                <h2 class="text-orange">BAB 2: HTML5 FOUNDATION</h2>
+                <p>Tulang punggung struktural halaman web.</p>
+            </div>
+
+            <div class="comic-card mb-4">
+                <div class="card-body">
+                    <h3>Struktur Dasar HTML5</h3>
+                    <div class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Judul&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Konten --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-container">
+                <div class="comic-card">
+                    <div class="card-body">
+                        <h3>Semantic Elements</h3>
+                        <ul class="list-style">
+                            <li>&lt;header&gt;: Kepala</li>
+                            <li>&lt;nav&gt;: Menu</li>
+                            <li>&lt;main&gt;: Isi Utama</li>
+                            <li>&lt;footer&gt;: Kaki</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="comic-card">
+                    <div class="card-body">
+                        <h3>Formulir Modern</h3>
+                        <form onsubmit="event.preventDefault(); alert('Validasi Sukses!');">
+                            <input type="email" placeholder="Email (Wajib)" required>
+                            <input type="date">
+                            <button class="btn btn-green full-width">Coba Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-row mt-4">
+                <button onclick="window.location.href='bab1.html'" class="btn btn-dark">&larr; BAB 1</button>
+                <button onclick="window.location.href='bab3.html'" class="btn btn-blue">LANJUT KE BAB 3 &rarr;</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h3>KELOMPOK 8</h3>
+        <p>Universitas Pamulang - Teknik Informatika 2025</p>
+        <p class="footer-credit">Kelompok 8</p>
+    </footer>
+
+    <!-- Link ke File JavaScript Eksternal -->
+    <script src="../js/Script.js"></script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Faiq Aflah</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Bangers (Comic Header) & Comic Neue (Body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'comic': ['"Bangers"', 'cursive'],
+                        'body': ['"Comic Neue"', 'cursive'],
+                    },
+                    colors: {
+                        'comic-yellow': '#FFD700',
+                        'comic-blue': '#4FACFE',
+                        'comic-red': '#FF4E50',
+                        'comic-paper': '#F9F7F2',
+                    },
+                    boxShadow: {
+                        'hard': '6px 6px 0px 0px rgba(0,0,0,1)',
+                        'hard-sm': '3px 3px 0px 0px rgba(0,0,0,1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fff;
+            border-left: 2px solid black;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #000;
+            border: 2px solid #fff;
+        }
+
+        /* Comic Speech Bubble Triangle */
+        .speech-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 20%;
+            border-width: 20px 20px 0;
+            border-style: solid;
+            border-color: black transparent;
+            display: block;
+            width: 0;
+        }
+        .speech-bubble::before {
+            content: '';
+            position: absolute;
+            bottom: -14px;
+            left: 21%;
+            border-width: 16px 16px 0;
+            border-style: solid;
+            border-color: white transparent;
+            display: block;
+            width: 0;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="bg-comic-paper font-body text-black overflow-x-hidden selection:bg-comic-yellow selection:text-black">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 w-full z-50 bg-white border-b-4 border-black py-3 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="bab7.html" class="text-3xl md:text-4xl font-comic tracking-wider hover:text-comic-red transition-colors rotate-1 inline-block cursor-pointer">
+                Kelompok 8
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 font-bold text-lg">
+                <a href="#about" class="hover:underline decoration-4 decoration-comic-yellow underline-offset-4">Home</a>
+                <a href="#skills" class="hover:underline decoration-4 decoration-comic-blue underline-offset-4">Keahlian</a>
+                <a href="#portfolio" class="hover:underline decoration-4 decoration-comic-red underline-offset-4">Portfolio</a>
+                <a href="#contact" class="bg-black text-white px-4 py-1 border-2 border-transparent hover:bg-white hover:text-black hover:border-black hover:shadow-hard-sm transition-all">Kontak</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden border-2 border-black p-1 hover:bg-comic-yellow transition-colors shadow-hard-sm">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Dropdown -->
+        <nav id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white border-b-4 border-black p-4 flex-col space-y-4 font-bold text-xl shadow-hard">
+            <a href="#about" class="block hover:text-comic-red mobile-link">Home</a>
+            <a href="#skills" class="block hover:text-comic-blue mobile-link">Keahlian</a>
+            <a href="#portfolio" class="block hover:text-comic-yellow mobile-link">Portfolio</a>
+            <a href="#contact" class="block mobile-link">Kontak</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION (Content dari Faiq) -->
+    <section id="about" class="pt-32 pb-20 px-4 min-h-screen flex items-center bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Text Content -->
+            <div class="order-2 md:order-1 relative">
+                <div class="bg-white border-4 border-black p-8 shadow-hard relative speech-bubble mb-8">
+                    <h1 class="font-comic text-5xl md:text-7xl mb-4 leading-none">
+                        Halo! Saya <br><span class="text-comic-red">Kelompok 8</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl font-bold text-gray-800">
+                        Web Developer Profesional
+                    </p>
+                    <p class="mt-4 text-lg">
+                        Seorang Web Developer yang berdedikasi menciptakan website modern, cepat, dan responsif untuk kebutuhan bisnis Anda.
+                    </p>
+                </div>
+                
+                <div class="mt-12 flex gap-4">
+                    <a href="#portfolio" class="bg-comic-yellow border-4 border-black px-6 py-3 font-comic text-2xl hover:bg-white hover:shadow-hard transition-all transform hover:-translate-y-1">
+                        Lihat Portfolio
+                    </a>
+                    <a href="#contact" class="bg-white border-4 border-black px-6 py-3 font-comic text-2xl shadow-hard hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
+                        Hubungi Saya
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image / Avatar -->
+            <div class="order-1 md:order-2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 bg-comic-blue border-4 border-black rounded-full overflow-hidden shadow-hard animate-bounce-slow">
+                     <!-- Mencoba load gambar user, fallback ke SVG jika gagal -->
+                     <img 
+                        src="Image/WhatsApp Image 2025-12-07 at 19.35.59_34b8d19c.jpg" 
+                        alt="Faiq Aflah" 
+                        class="w-full h-full object-cover"
+                        onerror="this.style.display='none'; document.getElementById('fallback-avatar').style.display='block';"
+                    >
+                     
+                     <!-- Fallback Avatar (Jika gambar user tidak ditemukan) -->
+                    <svg id="fallback-avatar" class="w-full h-full hidden" style="display:none;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="200" height="200" fill="#4FACFE"/>
+                        <circle cx="100" cy="90" r="50" fill="#FFD700" stroke="black" stroke-width="4"/>
+                        <path d="M70,140 Q100,180 130,140" fill="none" stroke="black" stroke-width="4" stroke-linecap="round"/>
+                        <circle cx="85" cy="80" r="5" fill="black"/>
+                        <circle cx="115" cy="80" r="5" fill="black"/>
+                        <rect x="50" y="140" width="100" height="60" fill="#FF4E50" stroke="black" stroke-width="4"/>
+                    </svg>
+                    
+                    <!-- Script kecil untuk menampilkan fallback jika img src error (inline handle) -->
+                    <script>
+                        const img = document.querySelector('img[alt="Faiq Aflah"]');
+                        img.onerror = function() {
+                            this.style.display = 'none';
+                            document.getElementById('fallback-avatar').style.display = 'block';
+                        };
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEAHLIAN UTAMA (Menggantikan 'Kekuatan Super') -->
+    <section id="skills" class="py-20 bg-comic-yellow border-t-4 border-b-4 border-black">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="font-comic text-5xl md:text-6xl text-center mb-12 text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)] stroke-black" style="-webkit-text-stroke: 2px black;">
+                KEAHLIAN UTAMA
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <article class="bg-white border-4 border-black p-6 shadow-hard hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-comic-red border-2 border-black mb-4 flex items-center justify-center">
+                        <i data-lucide="code" class="text-white"></i>
+                    </div>
+                    <h3 class="font-comic text-3xl mb-2">Frontend Dev</h3>
+                    <p class="font-bold">Membangun antarmuka yang indah dengan HTML, CSS, dan JavaScript modern.</p>
+                </article>
+
+                <!-- Skill 2 -->
+                <article class="bg-white border-4 border-black p-6 shadow-hard hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-comic-blue border-2 border-black mb-4 flex items-center justify-center">
+                        <i data-lucide="layout" class="text-white"></i>
+                    </div>
+                    <h3 class="font-comic text-3xl mb-2">UI/UX Design</h3>
+                    <p class="font-bold">Merancang pengalaman pengguna yang intuitif dan memanjakan mata.</p>
+                </article>
+
+                <!-- Skill 3 -->
+                <article class="bg-white border-4 border-black p-6 shadow-hard hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-comic-yellow border-2 border-black mb-4 flex items-center justify-center">
+                        <i data-lucide="smartphone" class="text-white"></i>
+                    </div>
+                    <h3 class="font-comic text-3xl mb-2">Responsive</h3>
+                    <p class="font-bold">Memastikan website terlihat sempurna di semua ukuran layar perangkat.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION (Tetap Galeri Terbaru) -->
+    <section id="portfolio" class="py-20 px-4 bg-comic-paper">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-comic text-5xl text-center mb-4">GALERI TERBARU</h2>
+            <p class="text-center font-bold text-xl mb-12">Beberapa proyek pilihan yang telah dikerjakan.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <article class="group relative">
+                    <div class="absolute inset-0 bg-black translate-x-2 translate-y-2 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform"></div>
+                    <div class="relative bg-white border-4 border-black h-64 overflow-hidden group-hover:-translate-y-1 transition-transform cursor-pointer">
+                        <div class="w-full h-full bg-comic-red flex items-center justify-center flex-col p-4 text-center">
+                             <i data-lucide="shopping-bag" class="w-16 h-16 text-white mb-2"></i>
+                             <span class="font-comic text-3xl text-white">E-Commerce App</span>
+                        </div>
+                    </div>
+                    <div class="absolute top-2 left-2 bg-yellow-300 border-2 border-black px-2 font-bold text-xs uppercase">
+                        Website Toko Online
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="group relative">
+                    <div class="absolute inset-0 bg-black translate-x-2 translate-y-2 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform"></div>
+                    <div class="relative bg-white border-4 border-black h-64 overflow-hidden group-hover:-translate-y-1 transition-transform cursor-pointer">
+                        <div class="w-full h-full bg-comic-blue flex items-center justify-center flex-col p-4 text-center">
+                             <i data-lucide="monitor" class="w-16 h-16 text-white mb-2"></i>
+                             <span class="font-comic text-3xl text-white">Company Profile</span>
+                        </div>
+                    </div>
+                     <div class="absolute top-2 left-2 bg-yellow-300 border-2 border-black px-2 font-bold text-xs uppercase">
+                        Corporate
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="group relative">
+                    <div class="absolute inset-0 bg-black translate-x-2 translate-y-2 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform"></div>
+                    <div class="relative bg-white border-4 border-black h-64 overflow-hidden group-hover:-translate-y-1 transition-transform cursor-pointer">
+                        <div class="w-full h-full bg-gray-800 flex items-center justify-center flex-col p-4 text-center">
+                             <i data-lucide="user" class="w-16 h-16 text-white mb-2"></i>
+                             <span class="font-comic text-3xl text-white">Personal Blog</span>
+                        </div>
+                    </div>
+                     <div class="absolute top-2 left-2 bg-yellow-300 border-2 border-black px-2 font-bold text-xs uppercase">
+                        Blog / Berita
+                    </div>
+                </article>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-white border-4 border-black px-8 py-2 font-comic text-2xl hover:bg-black hover:text-white transition-colors">
+                    Lihat Semua Proyek
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH STACK SECTION (Ditambahkan di bawah Galeri) -->
+    <section class="py-16 bg-white border-t-4 border-black">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="font-comic text-5xl mb-12">TECH STACK</h2>
+            
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- HTML5 -->
+                <div class="flex items-center gap-3 px-6 py-3 bg-white border-4 border-black shadow-hard hover:translate-y-[-4px] hover:shadow-hard-sm transition-all cursor-default">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" class="w-8 h-8">
+                    <span class="font-comic text-xl">HTML5</span>
+                </div>
+
+                <!-- CSS3 -->
+                <div class="flex items-center gap-3 px-6 py-3 bg-white border-4 border-black shadow-hard hover:translate-y-[-4px] hover:shadow-hard-sm transition-all cursor-default">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" class="w-8 h-8">
+                    <span class="font-comic text-xl">CSS3</span>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="flex items-center gap-3 px-6 py-3 bg-white border-4 border-black shadow-hard hover:translate-y-[-4px] hover:shadow-hard-sm transition-all cursor-default">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-8 h-8">
+                    <span class="font-comic text-xl">JavaScript</span>
+                </div>
+
+                <!-- Tailwind -->
+                <div class="flex items-center gap-3 px-6 py-3 bg-white border-4 border-black shadow-hard hover:translate-y-[-4px] hover:shadow-hard-sm transition-all cursor-default">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" class="w-8 h-8">
+                    <span class="font-comic text-xl">Tailwind</span>
+                </div>
+
+                <!-- Figma -->
+                <div class="flex items-center gap-3 px-6 py-3 bg-white border-4 border-black shadow-hard hover:translate-y-[-4px] hover:shadow-hard-sm transition-all cursor-default">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma" class="w-8 h-8">
+                    <span class="font-comic text-xl">Figma</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION (Tetap) -->
+    <section id="contact" class="py-20 bg-comic-blue border-t-4 border-black relative overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 right-0 opacity-10 rotate-12 transform translate-x-1/4 -translate-y-1/4">
+             <i data-lucide="message-circle" class="w-96 h-96 text-white"></i>
+        </div>
+
+        <div class="max-w-2xl mx-auto px-4 relative z-10">
+            <div class="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_rgba(0,0,0,1)]">
+                <h2 class="font-comic text-4xl mb-2">Kirim Pesan!</h2>
+                <p class="font-bold text-gray-600 mb-6">Punya proyek menarik? Mari kita bicarakan!</p>
+
+                <form id="contactForm" class="space-y-4">
+                    <div>
+                        <label class="block font-bold mb-1 border-b-2 border-black inline-block">Nama Kamu</label>
+                        <input type="text" class="w-full bg-comic-paper border-2 border-black p-3 focus:outline-none focus:shadow-hard-sm transition-shadow font-bold" placeholder="Nama Anda">
+                    </div>
+                    
+                    <div>
+                        <label class="block font-bold mb-1 border-b-2 border-black inline-block">Email</label>
+                        <input type="email" class="w-full bg-comic-paper border-2 border-black p-3 focus:outline-none focus:shadow-hard-sm transition-shadow font-bold" placeholder="email@contoh.com">
+                    </div>
+
+                    <div>
+                        <label class="block font-bold mb-1 border-b-2 border-black inline-block">Pesan</label>
+                        <textarea rows="4" class="w-full bg-comic-paper border-2 border-black p-3 focus:outline-none focus:shadow-hard-sm transition-shadow font-bold" placeholder="Ceritakan tentang proyek Anda..."></textarea>
+                    </div>
+
+                    <button type="button" onclick="kirimPesan()" class="w-full bg-comic-red text-white border-4 border-black py-3 font-comic text-2xl hover:bg-white hover:text-black hover:shadow-hard transition-all">
+                        KIRIM SEKARANG!
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-white py-8 border-t-4 border-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="font-comic text-3xl mb-4">FAIQ AFLAH</h2>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="hover:text-comic-yellow transition-colors"><i data-lucide="instagram"></i></a>
+                <a href="#" class="hover:text-comic-yellow transition-colors"><i data-lucide="twitter"></i></a>
+                <a href="#" class="hover:text-comic-yellow transition-colors"><i data-lucide="github"></i></a>
+            </div>
+            <p class="font-body font-bold text-sm text-gray-400">
+                &copy; 2025 Contoh Portofolio . All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+
+        // Simple Form Action (Simulasi)
+        function kirimPesan() {
+            const btn = document.querySelector('#contactForm button');
+            const originalText = btn.innerText;
+            
+            btn.innerText = "TERKIRIM!";
+            btn.style.backgroundColor = "#4FACFE"; // Comic blue
+            
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.backgroundColor = ""; // Reset
+                document.getElementById('contactForm').reset();
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

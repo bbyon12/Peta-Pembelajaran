@@ -1,0 +1,166 @@
+<!--
+Nama file : index.html
+Tanggal ngoding: 25 December 2025
+Kelas : 05TPLP017
+Kelompok : 8
+Anggota : FAIQ AFLAH NADIF, RUDI SAFRIAN, YOHANES HUTAGAOL
+Deskripsi : Halaman utama berisi peta pembelajaran dengan card untuk setiap bab, serta navigasi ke about dan contact
+-->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Web Programming - Kelompok 8</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Link ke File CSS Eksternal -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header flex-row">
+        <div class="logo-area" onclick="navigateTo('home')">
+            <div class="logo-icon">8</div>
+            <h1>KELOMPOK 8</h1>
+        </div>
+        <!-- Menu Navigasi -->
+        <div class="nav-group">
+            <button onclick="window.location.href='index.html'" class="btn btn-pink btn-nav">🏠 HOME</button>
+            <button onclick="window.location.href='about.html'" class="btn btn-blue btn-nav">👥 ABOUT</button>
+            <button onclick="window.location.href='contact.html'" class="btn btn-green btn-nav">📞 CONTACT</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="app" class="container">
+        
+        <!-- === HALAMAN HOME === -->
+        <div id="home" class="page fade-in">
+            <div class="text-center mb-4">
+                <div class="speech-bubble">
+                    <h3>Selamat Datang di Makalah Interaktif!</h3>
+                    <p>Ayo belajar HTML, CSS, & JS dengan cara seru!</p>
+                </div>
+                <h2 style="font-size: 3rem; margin-bottom: 10px;">PETA PEMBELAJARAN</h2>
+                <span class="rotate-badge">
+                    Universitas Pamulang - Teknik Informatika
+                </span>
+            </div>
+
+            <div class="grid-container">
+                <!-- Menu Bab 1-6 -->
+                <div class="comic-card" onclick="window.location.href='materi/bab1.html'">
+                    <div class="card-header-strip strip-dark"></div>
+                    <div class="card-body">
+                        <h3 class="text-pink">BAB 1</h3>
+                        <h4>Pendahuluan</h4>
+                        <p>Apa itu Web Programming? Frontend vs Backend.</p>
+                        <div class="card-footer">
+                            <span class="btn btn-dark btn-small">BACA &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comic-card" onclick="window.location.href='materi/bab2.html'">
+                    <div class="card-header-strip strip-orange"></div>
+                    <div class="card-body">
+                        <h3 class="text-orange">BAB 2</h3>
+                        <h4>HTML5 Foundation</h4>
+                        <p>Struktur dokumen, Semantic HTML, & Formulir.</p>
+                        <div class="card-footer">
+                            <span class="btn btn-dark btn-small">BACA &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comic-card" onclick="window.location.href='materi/bab3.html'">
+                    <div class="card-header-strip strip-blue"></div>
+                    <div class="card-body">
+                        <h3 class="text-blue">BAB 3</h3>
+                        <h4>CSS Modern</h4>
+                        <p>Box Model, Flexbox, Grid, & Responsivitas.</p>
+                        <div class="card-footer">
+                            <span class="btn btn-dark btn-small">BACA &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comic-card" onclick="window.location.href='materi/bab4.html'">
+                    <div class="card-header-strip strip-purple"></div>
+                    <div class="card-body">
+                        <h3 class="text-purple">BAB 4</h3>
+                        <h4>CSS Frameworks</h4>
+                        <p>Bootstrap vs Tailwind CSS.</p>
+                        <div class="card-footer">
+                            <span class="btn btn-dark btn-small">BACA &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comic-card" onclick="window.location.href='materi/bab5.html'">
+                    <div class="card-header-strip strip-yellow"></div>
+                    <div class="card-body">
+                        <h3 class="text-yellow">BAB 5</h3>
+                        <h4>JavaScript ES6+</h4>
+                        <p>Variabel, Arrow Function, & Logika.</p>
+                        <div class="card-footer">
+                            <span class="btn btn-dark btn-small">BACA &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comic-card" onclick="window.location.href='materi/bab6.html'">
+                    <div class="card-header-strip strip-green"></div>
+                    <div class="card-body">
+                        <h3 class="text-green">BAB 6</h3>
+                        <h4>DOM & Events</h4>
+                        <p>Interaktivitas & Manipulasi Elemen.</p>
+                        <div class="card-footer">
+                            <span class="btn btn-dark btn-small">BACA &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bab 7 -->
+                <div class="comic-card full-width" onclick="window.location.href='materi/bab7.html'">
+                    <div class="card-header-strip strip-dark"></div>
+                    <div class="card-body flex-row">
+                        <div>
+                            <h3>BAB 7: INTEGRASI HTML, CSS FRAMEWORK, DAN JAVASCRIPT</h3>
+                            <p>Best Practices, Studi Kasus Portfolio, Form Validasi, & Galeri Modal.</p>
+                        </div>
+                        <span class="btn btn-dark">BUKA &rarr;</span>
+                    </div>
+                </div>
+                 <!-- Bab 8 -->
+                <div class="comic-card full-width" onclick="window.location.href='materi/bab8.html'">
+                    <div class="card-header-strip strip-orange"></div>
+                    <div class="card-body flex-row">
+                        <div>
+                            <h3>BAB 8: Project Akhir: E-Commerce</h3>
+                            <p>website e-commerce lengkap dengan fitur keranjang belanja, pembayaran, dan manajemen produk.</p>
+                        </div>
+                        <span class="btn btn-dark">BUKA &rarr;</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h3>KELOMPOK 8</h3>
+        <p>Universitas Pamulang - Teknik Informatika 2025</p>
+        <p class="footer-credit">Kelompok 8</p>
+    </footer>
+
+    <!-- Link ke File JavaScript Eksternal -->
+    <script src="js/Script.js"></script>
+</body>
+</html>

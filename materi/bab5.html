@@ -1,0 +1,93 @@
+<!--
+Nama file : bab5.html
+Tanggal ngoding: 25 December 2025
+Kelas : 05TPLP017
+Kelompok : 8
+Anggota : FAIQ AFLAH NADIF, RUDI SAFRIAN, YOHANES HUTAGAOL
+Deskripsi : Halaman BAB 5: JavaScript ES6+ - Logika pemrograman modern untuk web dinamis
+-->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAB 5: JavaScript ES6+ - Kelompok 8</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Link ke File CSS Eksternal -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header flex-row">
+        <div class="logo-area" onclick="window.location.href='../index.html'">
+            <div class="logo-icon">8</div>
+            <h1>KELOMPOK 8</h1>
+        </div>
+        <!-- Menu Navigasi -->
+        <div class="nav-group">
+            <button onclick="window.location.href='../index.html'" class="btn btn-pink btn-nav">🏠 HOME</button>
+            <button onclick="window.location.href='../about.html'" class="btn btn-blue btn-nav">👥 ABOUT</button>
+            <button onclick="window.location.href='../contact.html'" class="btn btn-green btn-nav">📞 CONTACT</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- === HALAMAN BAB 5 === -->
+        <div id="bab5" class="fade-in">
+            <div class="chapter-title bg-yellow-light">
+                <h2 class="text-yellow">BAB 5: JAVASCRIPT ES6+</h2>
+                <p>Logika pemrograman modern untuk web dinamis.</p>
+            </div>
+
+            <div class="comic-card mb-4">
+                <div class="card-body">
+                    <h3>Variabel & Arrow Function</h3>
+                    <div class="code-block">
+// Variabel
+const pi = 3.14; // Tetap
+let skor = 0;    // Bisa berubah
+
+// Arrow Function
+const sapa = (nama) => `Halo ${nama}`;
+                    </div>
+                </div>
+            </div>
+
+            <div class="comic-card bg-dark text-white">
+                <div class="card-body">
+                    <h3 class="text-primary">⚡ Demo: Kalkulator</h3>
+                    <div class="calc-container">
+                        <input type="number" id="angka1" placeholder="Angka 1" class="calc-input">
+                        <span>+</span>
+                        <input type="number" id="angka2" placeholder="Angka 2" class="calc-input">
+                        <button onclick="hitung()" class="btn btn-yellow calc-btn">=</button>
+                        <span id="hasil" class="calc-result">?</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-row mt-4">
+                <button onclick="window.location.href='bab4.html'" class="btn btn-dark">&larr; BAB 4</button>
+                <button onclick="window.location.href='bab6.html'" class="btn btn-green">LANJUT KE BAB 6 &rarr;</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h3>KELOMPOK 8</h3>
+        <p>Universitas Pamulang - Teknik Informatika 2025</p>
+        <p class="footer-credit">Kelompok 8</p>
+    </footer>
+
+    <!-- Link ke File JavaScript Eksternal -->
+    <script src="../js/Script.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!--
+Nama file : bab4.html
+Tanggal ngoding: 25 December 2025
+Kelas : 05TPLP017
+Kelompok : 8
+Anggota : FAIQ AFLAH NADIF, RUDI SAFRIAN, YOHANES HUTAGAOL
+Deskripsi : Halaman BAB 4: Framework CSS - Mempercepat proses styling dengan alat bantu
+-->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAB 4: Framework CSS - Kelompok 8</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Link ke File CSS Eksternal -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header flex-row">
+        <div class="logo-area" onclick="window.location.href='../index.html'">
+            <div class="logo-icon">8</div>
+            <h1>KELOMPOK 8</h1>
+        </div>
+        <!-- Menu Navigasi -->
+        <div class="nav-group">
+            <button onclick="window.location.href='../index.html'" class="btn btn-pink btn-nav">🏠 HOME</button>
+            <button onclick="window.location.href='../about.html'" class="btn btn-blue btn-nav">👥 ABOUT</button>
+            <button onclick="window.location.href='../contact.html'" class="btn btn-green btn-nav">📞 CONTACT</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- === HALAMAN BAB 4 === -->
+        <div id="bab4" class="fade-in">
+            <div class="chapter-title bg-purple-light">
+                <h2 class="text-purple">BAB 4: FRAMEWORK CSS</h2>
+                <p>Mempercepat proses styling dengan alat bantu.</p>
+            </div>
+
+            <div class="grid-container">
+                <div class="comic-card">
+                    <div class="card-body">
+                        <h3>Bootstrap 5</h3>
+                        <span class="badge purple">Component Based</span>
+                        <p>Menyediakan komponen siap pakai (Navbar, Modal).</p>
+                        <div class="code-block">class="btn btn-primary"</div>
+                    </div>
+                </div>
+                <div class="comic-card">
+                    <div class="card-body">
+                        <h3>Tailwind CSS</h3>
+                        <span class="badge blue">Utility First</span>
+                        <p>Menggunakan kelas kecil untuk membangun desain custom.</p>
+                        <div class="code-block">class="bg-blue-500 p-4"</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-row mt-4">
+                <button onclick="window.location.href='bab3.html'" class="btn btn-dark">&larr; BAB 3</button>
+                <button onclick="window.location.href='bab5.html'" class="btn btn-yellow">LANJUT KE BAB 5 &rarr;</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h3>KELOMPOK 8</h3>
+        <p>Universitas Pamulang - Teknik Informatika 2025</p>
+        <p class="footer-credit">Kelompok 8</p>
+    </footer>
+
+    <!-- Link ke File JavaScript Eksternal -->
+    <script src="../js/Script.js"></script>
+</body>
+</html>

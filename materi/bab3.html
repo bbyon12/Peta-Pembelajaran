@@ -1,0 +1,108 @@
+<!--
+Nama file : bab3.html
+Tanggal ngoding: 25 December 2025
+Kelas : 05TPLP017
+Kelompok : 8
+Anggota : FAIQ AFLAH NADIF, RUDI SAFRIAN, YOHANES HUTAGAOL
+Deskripsi : Halaman BAB 3: CSS Modern - Styling, Layout, dan Responsivitas
+-->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAB 3: CSS Modern - Kelompok 8</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Link ke File CSS Eksternal -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header flex-row">
+        <div class="logo-area" onclick="window.location.href='../index.html'">
+            <div class="logo-icon">8</div>
+            <h1>KELOMPOK 8</h1>
+        </div>
+        <!-- Menu Navigasi -->
+        <div class="nav-group">
+            <button onclick="window.location.href='../index.html'" class="btn btn-pink btn-nav">🏠 HOME</button>
+            <button onclick="window.location.href='../about.html'" class="btn btn-blue btn-nav">👥 ABOUT</button>
+            <button onclick="window.location.href='../contact.html'" class="btn btn-green btn-nav">📞 CONTACT</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- === HALAMAN BAB 3 === -->
+        <div id="bab3" class="fade-in">
+            <div class="chapter-title bg-blue-light">
+                <h2 class="text-blue">BAB 3: CSS MODERN</h2>
+                <p>Styling, Layout, dan Responsivitas.</p>
+            </div>
+
+            <div class="comic-card mb-4 text-center">
+                <div class="card-body">
+                    <h3>The Box Model</h3>
+                    <div class="box-model-demo">
+                        Margin
+                        <div class="box-border">
+                            Border
+                            <div class="box-padding">
+                                Padding
+                                <div class="box-content">CONTENT</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-container">
+                <div class="comic-card">
+                    <div class="card-body">
+                        <h3>Flexbox (1 Dimensi)</h3>
+                        <p>Mengatur elemen dalam satu baris ATAU satu kolom.</p>
+                        <div class="flex-demo">
+                            <div class="demo-box">1</div>
+                            <div class="demo-box">2</div>
+                            <div class="demo-box">3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comic-card">
+                    <div class="card-body">
+                        <h3>Grid (2 Dimensi)</h3>
+                        <p>Mengatur baris DAN kolom secara bersamaan.</p>
+                        <div class="grid-demo">
+                            <div class="demo-box-green">A</div>
+                            <div class="demo-box-green">B</div>
+                            <div class="demo-box-green">C</div>
+                            <div class="demo-box-green">D</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-row mt-4">
+                <button onclick="window.location.href='bab2.html'" class="btn btn-dark">&larr; BAB 2</button>
+                <button onclick="window.location.href='bab4.html'" class="btn btn-purple">LANJUT KE BAB 4 &rarr;</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h3>KELOMPOK 8</h3>
+        <p>Universitas Pamulang - Teknik Informatika 2025</p>
+        <p class="footer-credit">Kelompok 8</p>
+    </footer>
+
+    <!-- Link ke File JavaScript Eksternal -->
+    <script src="../js/Script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!--
+Nama file : bab1.html
+Tanggal ngoding: 25 December 2025
+Kelas : 05TPLP017
+Kelompok : 8
+Anggota : FAIQ AFLAH NADIF, RUDI SAFRIAN, YOHANES HUTAGAOL
+Deskripsi : Halaman BAB 1: Pendahuluan - Gerbang awal memahami dunia Web Development modern
+-->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAB 1: Pendahuluan - Kelompok 8</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Link ke File CSS Eksternal -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header flex-row">
+        <div class="logo-area" onclick="window.location.href='../index.html'">
+            <div class="logo-icon">8</div>
+            <h1>KELOMPOK 8</h1>
+        </div>
+        <!-- Menu Navigasi -->
+        <div class="nav-group">
+            <button onclick="window.location.href='../index.html'" class="btn btn-pink btn-nav">🏠 HOME</button>
+            <button onclick="window.location.href='../about.html'" class="btn btn-blue btn-nav">👥 ABOUT</button>
+            <button onclick="window.location.href='../contact.html'" class="btn btn-green btn-nav">📞 CONTACT</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- === HALAMAN BAB 1 === -->
+        <div id="bab1" class="fade-in">
+            <div class="chapter-title bg-pink-light">
+                <h2 class="text-pink">BAB 1: PENDAHULUAN</h2>
+                <p>Gerbang awal memahami dunia Web Development modern.</p>
+            </div>
+
+            <div class="grid-container">
+                <div class="comic-card">
+                    <div class="card-body">
+                        <h3>Apa itu Web Programming?</h3>
+                        <p>Penulisan kode untuk menciptakan situs web:</p>
+                        <ul class="list-style">
+                            <li><strong>Frontend:</strong> Tampilan (HTML, CSS, JS)</li>
+                            <li><strong>Backend:</strong> Server & Database</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="comic-card bg-yellow-light">
+                    <div class="card-body">
+                        <h3>Peran Developer</h3>
+                        <p><strong>Frontend:</strong> Fokus UI/UX.<br>
+                        <strong>Backend:</strong> Fokus Data.<br>
+                        <strong>Fullstack:</strong> Bisa keduanya.</p>
+                    </div>
+                </div>
+                
+                <div class="comic-card">
+                    <div class="card-body">
+                        <h3>🧰 Tools Wajib</h3>
+                        <p>VS Code, Chrome Browser, Git/GitHub.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-row mt-4 flex-end">
+                <button onclick="window.location.href='bab2.html'" class="btn btn-orange">LANJUT KE BAB 2 &rarr;</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h3>KELOMPOK 8</h3>
+        <p>Universitas Pamulang - Teknik Informatika 2025</p>
+        <p class="footer-credit">Kelompok 8</p>
+    </footer>
+
+    <!-- Link ke File JavaScript Eksternal -->
+    <script src="../js/Script.js"></script>
+</body>
+</html>

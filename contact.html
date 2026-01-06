@@ -1,0 +1,150 @@
+<!--
+Nama file : contact.html
+Tanggal ngoding: 25 December 2025
+Kelas : 05TPLP017
+Kelompok : 8
+Anggota : FAIQ AFLAH NADIF, RUDI SAFRIAN, YOHANES HUTAGAOL
+Deskripsi : Halaman Kontak berisi form, video perkenalan anggota kelompok (dengan almamater) dan pembagian
+-->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - Kelompok 8</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Link ke File CSS Eksternal -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header flex-row">
+        <div class="logo-area" onclick="window.location.href='index.html'">
+            <div class="logo-icon">8</div>
+            <h1>KELOMPOK 8</h1>
+        </div>
+        <!-- Menu Navigasi -->
+        <div class="nav-group">
+            <button onclick="window.location.href='index.html'" class="btn btn-pink btn-nav">🏠 HOME</button>
+            <button onclick="window.location.href='about.html'" class="btn btn-blue btn-nav">👥 ABOUT</button>
+            <button onclick="window.location.href='contact.html'" class="btn btn-green btn-nav">📞 CONTACT</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- === HALAMAN CONTACT === -->
+        <div id="contact">
+            <div class="chapter-title bg-green-light">
+                <h2 class="text-green">HUBUNGI KAMI</h2>
+                <p>Punya pertanyaan? Kirim pesan kepada kami!</p>
+            </div>
+
+            <div class="grid-container">
+                <!-- Form Kontak -->
+                <div class="comic-card full-width">
+                    <div class="card-body">
+                        <div class="flex-row" style="align-items: flex-start;">
+                            <div style="flex: 1; padding-right: 20px;">
+                                <h3 class="mb-4">Kirim Pesan</h3>
+                                <form onsubmit="return validateForm();">
+                                    <label class="font-bold">Nama Lengkap</label>
+                                    <input type="text" placeholder="Masukkan nama anda..." required>
+                                    
+                                    <label class="font-bold">Email</label>
+                                    <input type="email" placeholder="email@contoh.com" required>
+                                    
+                                    <label class="font-bold">Pesan</label>
+                                    <textarea rows="5" placeholder="Tulis pesan anda disini..." style="width: 100%; padding: 10px; border: 2px solid black; font-family: 'Comic Neue'; margin-bottom: 10px;"></textarea>
+                                    
+                                    <button class="btn btn-blue">KIRIM PESAN 🚀</button>
+                                </form>
+                            </div>
+                            
+                            <!-- Info Kontak -->
+                            <div class="hidden-mobile" style="flex: 1; border-left: 2px dashed black; padding-left: 20px;">
+                                <h3 class="mb-4">Info Kampus</h3>
+                                <div class="comic-card bg-yellow-light mb-4">
+                                    <div class="card-body">
+                                        <h4>📍 Lokasi</h4>
+                                        <p>Universitas Pamulang, Kampus Viktor.<br>Jl. Raya Puspitek, Buaran, Serpong.</p>
+                                    </div>
+                                </div>
+                                <div class="comic-card bg-pink-light mb-4">
+                                    <div class="card-body">
+                                        <h4>📧 Email</h4>
+                                        <p>kelompok8@unpam.ac.id</p>
+                                    </div>
+                                </div>
+                                <div class="comic-card bg-blue-light">
+                                    <div class="card-body">
+                                        <h4>🎥 Video Kelompok</h4>
+                                        <video id="kampusVideo" width="100%" controls style="border-radius: 10px;">
+                                            <source src="Video/Kelompok.mp4" type="video/mp4">
+                                            Browser Anda tidak mendukung tag video.
+                                        </video>
+                                        <button id="playPauseBtn" class="btn btn-green mt-2" onclick="toggleVideo()">▶ Play</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button onclick="window.location.href='index.html'" class="btn btn-pink">KEMBALI KE HOME</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h3>KELOMPOK 8</h3>
+        <p>Universitas Pamulang - Teknik Informatika 2025</p>
+        <p class="footer-credit">Kelompok 8</p>
+    </footer>
+
+    <!-- Link ke File JavaScript Eksternal -->
+    <script src="js/Script.js"></script>
+    <script>
+        function validateForm() {
+            const nama = document.querySelector('input[type="text"]').value.trim();
+            const email = document.querySelector('input[type="email"]').value.trim();
+            const pesan = document.querySelector('textarea').value.trim();
+            
+            if (!nama || !email || !pesan) {
+                alert('Semua field harus diisi!');
+                return false;
+            }
+            
+            if (!email.includes('@')) {
+                alert('Email tidak valid!');
+                return false;
+            }
+            
+            alert('Pesan Anda telah terkirim! (Simulasi)');
+            return false; // Prevent actual submit
+        }
+
+        function toggleVideo() {
+            const video = document.getElementById('kampusVideo');
+            const btn = document.getElementById('playPauseBtn');
+            
+            if (video.paused) {
+                video.play();
+                btn.innerText = '⏸ Pause';
+            } else {
+                video.pause();
+                btn.innerText = '▶ Play';
+            }
+        }
+    </script>
+</body>
+</html>

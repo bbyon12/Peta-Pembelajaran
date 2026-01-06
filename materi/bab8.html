@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAB 8: JDM Legends Garage - Kelompok 8</title>
+
+    <!-- Tailwind CSS untuk Styling Cepat & Komik -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Link ke File CSS Eksternal -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Config Tailwind Tema Komik -->
+    <script src="../js/tailwind-config.js"></script>
+    <style>
+        body {
+            background-image: radial-gradient(#000 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #fff; border-left: 2px solid black; }
+        ::-webkit-scrollbar-thumb { background: #D80027; border: 2px solid black; }
+    </style>
+</head>
+<body class="bg-jdm-white font-body text-black">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 w-full z-40 bg-white border-b-4 border-black py-3 px-4 shadow-md">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='../index.html'">
+                <div class="bg-jdm-red text-white w-10 h-10 flex items-center justify-center border-2 border-black rounded-full font-comic text-xl">8</div>
+                <h1 class="font-comic text-2xl md:text-3xl tracking-wide">JDM LEGENDS <span class="text-jdm-red">GARAGE</span></h1>
+            </div>
+
+            <!-- Cart Counter (Klik untuk buka Modal Keranjang) -->
+            <div class="flex items-center gap-4">
+                <div class="relative group cursor-pointer" onclick="openJDMCart()">
+                    <i data-lucide="shopping-cart" class="w-8 h-8 group-hover:text-jdm-red transition-colors"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-jdm-yellow text-black border-2 border-black font-bold text-xs w-6 h-6 flex items-center justify-center rounded-full animate-bounce">0</span>
+                </div>
+                <button onclick="window.location.href='../index.html'" class="hidden md:block bg-black text-white border-2 border-transparent px-4 py-1 font-comic hover:bg-white hover:text-black hover:border-black hover:shadow-hard transition-all">
+                    KEMBALI KE HOME
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 pt-28 pb-20">
+
+        <!-- INTRO MATERI (8.1 - 8.3) -->
+        <section class="mb-16">
+            <div class="bg-black text-white p-6 border-4 border-black shadow-hard mb-8 transform -rotate-1">
+                <h2 class="font-comic text-4xl text-jdm-yellow">BAB VIII: PROYEK AKHIR (E-COMMERCE)</h2>
+                <p class="text-lg">Studi Kasus: Membangun Web Penjualan Mobil JDM Interaktif.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- 8.1 Brief -->
+                <article class="bg-white p-6 border-4 border-black shadow-hard">
+                    <h3 class="font-comic text-2xl text-jdm-red mb-2 border-b-2 border-black inline-block">8.1 Brief Project</h3>
+                    <ul class="list-disc pl-5 font-bold space-y-2">
+                        <li><strong>Tujuan:</strong> Membuat katalog mobil Jepang (JDM) klasik.</li>
+                        <li><strong>Target:</strong> Kolektor mobil & penggemar drift.</li>
+                        <li><strong>Fitur Utama:</strong> Card Produk, Modal Detail (Pop-up), Keranjang Belanja (DOM).</li>
+                    </ul>
+                </article>
+
+                <!-- 8.2 & 8.3 Structure & Styling -->
+                <article class="bg-white p-6 border-4 border-black shadow-hard">
+                    <h3 class="font-comic text-2xl text-jdm-red mb-2 border-b-2 border-black inline-block">8.2 & 8.3 Struktur & Styling</h3>
+                    <ul class="list-disc pl-5 font-bold space-y-2">
+                        <li><strong>Framework:</strong> Tailwind CSS (Utility-first agar cepat & ringan).</li>
+                        <li><strong>Layout:</strong> Grid System (1 kolom HP, 3 kolom Desktop).</li>
+                        <li><strong>HTML Semantik:</strong> <code>&lt;main&gt;</code> untuk katalog, <code>&lt;article&gt;</code> untuk kartu mobil.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- APLIKASI UTAMA (8.4 IMPLEMENTASI DOM) -->
+        <section id="showroom">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="font-comic text-5xl text-black drop-shadow-[2px_2px_0_#fff] stroke-black">SHOWROOM MOBIL</h2>
+                <div class="hidden md:block bg-jdm-yellow px-4 py-2 border-4 border-black font-bold transform rotate-2">
+                    STOK TERBATAS! 🔥
+                </div>
+            </div>
+
+            <!-- GRID PRODUK (Di-render oleh JS) -->
+            <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card mobil akan muncul di sini lewat JavaScript -->
+            </div>
+        </section>
+
+        <!-- 8.5 & 8.6 MATERI PENUTUP -->
+        <section class="mt-20 border-t-4 border-black pt-10">
+            <h2 class="font-comic text-4xl mb-6 text-center">TAHAP AKHIR</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-jdm-yellow border-4 border-black p-6 shadow-hard">
+                    <h3 class="font-comic text-2xl mb-2">8.5 Testing & Debugging</h3>
+                    <p class="font-bold">Gunakan <code>console.log()</code> untuk mengecek apakah data masuk ke keranjang. Cek responsivitas menggunakan Chrome DevTools (F12).</p>
+                </div>
+                <div class="bg-jdm-red text-white border-4 border-black p-6 shadow-hard">
+                    <h3 class="font-comic text-2xl mb-2">8.6 Deployment</h3>
+                    <p class="font-bold">Push kodemu ke GitHub, lalu aktifkan GitHub Pages agar websitemu bisa diakses seluruh dunia lewat URL publik.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-white py-8 border-t-8 border-jdm-red text-center mt-12">
+        <h3 class="font-comic text-3xl">KELOMPOK 8 GARAGE</h3>
+        <p class="font-bold text-gray-400">© 2026 JDM Legends. Built with Passion & Code.</p>
+    </footer>
+
+    <!-- === MODAL PRODUK DETAIL (Pop-up) === -->
+    <div id="productModal" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white border-4 border-black w-full max-w-2xl shadow-[0_0_50px_rgba(255,255,255,0.3)] relative animate-bounce-slow flex flex-col md:flex-row overflow-hidden">
+
+            <button onclick="closeJDMModal()" class="absolute top-2 right-2 bg-jdm-red text-white border-2 border-black w-8 h-8 flex items-center justify-center font-bold hover:scale-110 transition-transform z-10">X</button>
+
+            <div class="w-full md:w-1/2 h-64 md:h-auto bg-gray-200 border-b-4 md:border-b-0 md:border-r-4 border-black">
+                <img id="modalImg" src="" alt="Detail Mobil" class="w-full h-full object-cover">
+            </div>
+
+            <div class="w-full md:w-1/2 p-6 flex flex-col justify-between bg-white">
+                <div>
+                    <span id="modalCategory" class="bg-jdm-yellow text-xs font-bold px-2 py-1 border border-black inline-block mb-2">CATEGORY</span>
+                    <h3 id="modalTitle" class="font-comic text-4xl mb-2 leading-none">NAMA MOBIL</h3>
+                    <p id="modalPrice" class="text-2xl font-bold text-jdm-red mb-4">Rp 0</p>
+                    <p id="modalDesc" class="font-body text-sm mb-4 border-l-4 border-gray-300 pl-3">Deskripsi...</p>
+
+                    <div class="grid grid-cols-2 gap-2 mb-6 text-xs font-bold">
+                        <div class="bg-gray-100 p-1 border border-black text-center">🏁 0-100: <span id="modalSpeed">4.5s</span></div>
+                        <div class="bg-gray-100 p-1 border border-black text-center">🐎 HP: <span id="modalHp">276 HP</span></div>
+                    </div>
+                </div>
+
+                <button id="btnAddToCart" class="w-full bg-black text-white border-4 border-transparent py-3 font-comic text-xl hover:bg-jdm-red hover:border-black hover:shadow-hard transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="shopping-cart" class="w-5 h-5"></i> MASUKKAN KERANJANG
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- === MODAL KERANJANG (Pop-up Cart) === -->
+    <div id="cartModal" class="fixed inset-0 z-[60] bg-black/80 hidden items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white border-4 border-black w-full max-w-md shadow-hard relative flex flex-col max-h-[90vh]">
+
+            <!-- Header Cart -->
+            <div class="bg-jdm-yellow border-b-4 border-black p-4 flex justify-between items-center">
+                <h3 class="font-comic text-2xl">KERANJANG BELANJA</h3>
+                <button onclick="closeJDMCart()" class="bg-jdm-red text-white border-2 border-black w-8 h-8 font-bold hover:scale-110">X</button>
+            </div>
+
+            <!-- Body Cart (List Items) -->
+            <div id="cartItemsContainer" class="p-4 overflow-y-auto flex-1 bg-jdm-white space-y-3">
+                <!-- Item keranjang akan muncul di sini (Di-render JS) -->
+                <p class="text-center text-gray-500 font-bold py-10">Keranjang masih kosong nih! 🚗</p>
+            </div>
+
+            <!-- Footer Cart (Total) -->
+            <div class="border-t-4 border-black p-4 bg-white">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="font-bold text-lg">TOTAL:</span>
+                    <span id="cartTotal" class="font-comic text-3xl text-jdm-red">Rp 0</span>
+                </div>
+                <button onclick="alert('Terima kasih sudah berbelanja! (Simulasi Checkout)')" class="w-full bg-black text-white border-4 border-transparent py-2 font-comic text-xl hover:bg-jdm-red hover:border-black hover:shadow-hard transition-all">
+                    CHECKOUT SEKARANG
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link ke File JavaScript Eksternal -->
+    <script src="../js/Script.js"></script>
+</body>
+</html>
