@@ -439,3 +439,30 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener('DOMContentLoaded', function() {
             lucide.createIcons();
         });
+
+// === LOGIKA UPLOAD AVATAR ===
+document.addEventListener('DOMContentLoaded', () => {
+    // Fungsi untuk menangani upload avatar
+    function handleAvatarUpload(inputId, imgSelector) {
+        const input = document.getElementById(inputId);
+        const img = document.querySelector(imgSelector);
+        
+        if (input && img) {
+            input.addEventListener('change', (event) => {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        img.src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+    }
+
+    // Setup untuk setiap avatar
+    handleAvatarUpload('avatar-yohanes', '.comic-card:nth-child(1) .profile-avatar');
+    handleAvatarUpload('avatar-faiq', '.comic-card:nth-child(2) .profile-avatar');
+    handleAvatarUpload('avatar-rudi', '.comic-card:nth-child(3) .profile-avatar');
+});
