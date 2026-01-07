@@ -1,3 +1,12 @@
+/*
+Nama file : tailwind-config.js
+Tanggal ngoding: 25 December 2025
+Kelas : 05TPLP017
+Kelompok : 8
+Anggota : FAIQ AFLAH NADIF, RUDI SAFRIAN, YOHANES HUTAGAOL
+Deskripsi : File konfigurasi Tailwind CSS untuk tema komik JDM
+*/
+
 // Tailwind Config untuk Tema Komik JDM
 tailwind.config = {
     theme: {
